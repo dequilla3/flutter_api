@@ -27,7 +27,7 @@ export class PostService {
 
   async create(post: PostInterface) {
     const userById = await this.userService.findOneById(post.userId);
-    
+
     const postToPost = new PostFeed();
     postToPost.message = post.message;
     postToPost.date = new Date();

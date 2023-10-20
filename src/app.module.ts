@@ -4,9 +4,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
+import { GatewayModule } from './gateway/gateway.module';
 @Module({
   imports: [
-  
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -21,6 +21,7 @@ import { UserModule } from './user/user.module';
     UserModule,
     AuthModule,
     PostModule,
+    GatewayModule,
   ],
 })
 export class AppModule {}
