@@ -9,11 +9,10 @@ import {
 } from '@nestjs/common';
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
-import { PostFeed } from 'src/model/postfeed.entity';
-import { v4 as uuidv4 } from 'uuid';
-import { PostService } from './post.service';
-import { PostInterface } from './post.interface';
 import { AuthGuard } from 'src/auth/auth.guard';
+import { v4 as uuidv4 } from 'uuid';
+import { PostInterface } from './post.interface';
+import { PostService } from './post.service';
 
 @UseGuards(AuthGuard)
 @Controller('post')

@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
 import { GatewayModule } from './gateway/gateway.module';
+import { ChatModule } from './chat/chat.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -22,6 +23,7 @@ import { GatewayModule } from './gateway/gateway.module';
     AuthModule,
     PostModule,
     GatewayModule,
+    ChatModule,
   ],
 })
 export class AppModule {}

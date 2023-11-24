@@ -1,5 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { PostFeed } from './postfeed.entity';
+import { Chat } from './chat.entity';
 
 @Entity()
 export class User {
@@ -26,4 +27,10 @@ export class User {
 
   @OneToMany(() => PostFeed, (post) => post.user)
   posts: PostFeed[];
+
+  @OneToMany(() => Chat, (chat) => chat.fromuser)
+  chatsfrom: Chat[];
+
+  @OneToMany(() => Chat, (chat) => chat.touser)
+  chatsto: Chat[];
 }

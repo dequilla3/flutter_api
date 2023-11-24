@@ -1,4 +1,4 @@
-import { OnModuleInit } from '@nestjs/common';
+import { Controller, OnModuleInit } from '@nestjs/common';
 import {
   MessageBody,
   SubscribeMessage,
